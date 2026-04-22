@@ -66,12 +66,18 @@
         mySentence = "";
         myColor = "";
 
-        if (myHour >= 12) {
-        mySentence = "It's afternoon!";
-        myColor = "blue";
-        }else{
-        mySentence = "It's not afternoon!";
-        myColor = "purple";
+        if (myHour >= 5 && myHour < 12) {
+            mySentence = "It's morning!";
+            myColor = "blue";
+        } else if (myHour >= 12 && myHour < 18) {
+            mySentence = "It's afternoon!";
+            myColor = "purple";
+        } else if (myHour >= 18 && myHour < 23) {
+            mySentence = "It's evening!";
+            myColor = "orange";
+        } else {
+            mySentence = "It's night!";
+            myCOlor = "black";
         }
 
         document.getElementById("time-text").innerHTML = mySentence;
