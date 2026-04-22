@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time of Day</title>
+    <title>Time of Day by Takeo Shimazu</title>
     
     <style>
         /* We target the HTML element directly for our background color swap */
@@ -44,7 +44,7 @@
 <body>
 
     <div class="container">
-        <h1 id="main-greeting">Time of Day by NAME HERE</h1>
+        <h1 id="main-greeting">Time of Day by Takeo Shimazu</h1>
         
         <h2 id="time-text">What time is it?</h2>
 
@@ -61,6 +61,22 @@
         /* Below, we would target the 'html' element to change 
            the background color using document.querySelector('html') 
         */
+        myDate = new Date();
+        myHour = myDate.getHours();
+        mySentence = "";
+        myColor = "";
+
+        if (myHour >= 12) {
+        mySentence = "It's afternoon!";
+        myColor = "blue";
+        }else{
+        mySentence = "It's not afternoon!";
+        myColor = "purple";
+        }
+
+        document.getElementById("time-text").innerHTML = mySentence;
+        // document.body.style.backgroundColor = myColor;
+        document.querySelector('html').style.backgroundColor = myColor;
 
         // Fixes HTML/CSS Checker links
         document.addEventListener("DOMContentLoaded", function() {
