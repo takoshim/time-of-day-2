@@ -55,48 +55,71 @@
     </div>
 
     <script>
+
         // We will use this section to write our if/else logic
+
         // Example: document.querySelector('#time-text').innerHTML = "Good Morning!";
+
         
+
         /* Below, we would target the 'html' element to change 
+
            the background color using document.querySelector('html') 
+
         */
+
         myDate = new Date();
         myHour = myDate.getHours();
         mySentence = "";
         myColor = "";
+        myImage = "";
+
+        //myHour =  5;
+        //myHour =  8; // morniong
+        //myHour = 12;
+        myHour = 15; // afternoon
+        //myHour = 18;
+        //myHour = 20; // evening
+        //myHour = 23;
+        //myHour = 2;  // night
 
         if (myHour >= 5 && myHour < 12) {
             mySentence = "It's morning!";
             myColor = "blue";
-            getElementById("time-pic").src = "/images/morning.jpg";
-        
+            myImage = "/images/morning.jpg";
+
         } else if (myHour >= 12 && myHour < 18) {
             mySentence = "It's afternoon!";
             myColor = "purple";
-            getElementById("time-pic").src = "images/afternoon.jpg";
+            myImage = "/images/afternoon.jpg";
 
         } else if (myHour >= 18 && myHour < 23) {
             mySentence = "It's evening!";
             myColor = "orange";
-            getElementById("time-pic").src = "images/evening.jpg";
+            myImage = "/images/evening.jpg";
 
         } else {
             mySentence = "It's night!";
-            myCOlor = "black";
-            getElementById("time-pic").src = "images/night.jpg";
+            myColor = "black";
+            myImage = "/images/night.jpg";
         }
+
+
 
         document.getElementById("time-text").innerHTML = mySentence;
         // document.body.style.backgroundColor = myColor;
         document.querySelector('html').style.backgroundColor = myColor;
-
+        document.getElementById("time-pic").src= myImage;
         // Fixes HTML/CSS Checker links
+
         document.addEventListener("DOMContentLoaded", function() {
+
             var currentUrl = window.location.href;
             document.getElementById("html-validate").href = "https://validator.w3.org/nu/?doc=" + encodeURIComponent(currentUrl);
             document.getElementById("css-validate").href = "https://jigsaw.w3.org/css-validator/validator?uri=" + encodeURIComponent(currentUrl);
+
         });
+
     </script>
 
     <footer style="margin-top: 30px;">
