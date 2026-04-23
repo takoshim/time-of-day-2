@@ -69,22 +69,22 @@
         if (myHour >= 5 && myHour < 12) {
             mySentence = "It's morning!";
             myColor = "blue";
-            time-pic.src = "/images/morning.jpg";
+            getElementById("time-pic").src = "/images/morning.jpg";
         
         } else if (myHour >= 12 && myHour < 18) {
             mySentence = "It's afternoon!";
             myColor = "purple";
-            getElementById("time-pic") = "images/afternoon.jpg";
+            getElementById("time-pic").src = "images/afternoon.jpg";
 
         } else if (myHour >= 18 && myHour < 23) {
             mySentence = "It's evening!";
             myColor = "orange";
-            getElementById("time-pic") = "images/evening.jpg";
+            getElementById("time-pic").src = "images/evening.jpg";
 
         } else {
             mySentence = "It's night!";
             myCOlor = "black";
-            getElementById("time-pic") = "images/night.jpg";
+            getElementById("time-pic").src = "images/night.jpg";
         }
 
         document.getElementById("time-text").innerHTML = mySentence;
